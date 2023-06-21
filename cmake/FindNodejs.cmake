@@ -57,11 +57,6 @@ find_path(V8_CONFIG_INCLUDE_DIR
 #
 set(nodejs_known_names
     "libnode.so" "libnode.dylib"
-    "libnode.so.83" "libnode.83.dylib"
-    "libnode.so.93" "libnode.93.dylib"
-    "libnode.so.102" "libnode.102.dylib"
-    "libnode.so.108" "libnode.108.dylib"
-    "libnode.so.111" "libnode.111.dylib"
 )
 
 if ( NODEJS_ROOT_DIR )

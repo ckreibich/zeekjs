@@ -20,17 +20,3 @@ jobs:
 
     - name: Check (clang-format, build, btest, clang-tidy)
       run: docker build -t zeekjs-check-${{ matrix.distro }} -f docker/${{ matrix.distro }}.Dockerfile .
-
-  doc:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-
-    - name: Documentation
-      run: make -C doc container-html
-
-    - name: Archive html docs
-      uses: actions/upload-artifact@v2
-      with:
-        name: html
-        path: doc/_build/html
